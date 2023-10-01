@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:15:49 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/01 18:29:10 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/01 18:46:40 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,12 @@ int	main(int argc, char **argv)
 	std::string		line;
 	std::ifstream	infile(argv[1]);
 	std::ofstream	outfile(filename.append(".replace").c_str());
-	
-	// if (infile || outfile)
 
+	if (!infile.is_open() || !outfile.is_open() || infile.fail() || outfile.fail())
+	{
+		std::cout << "Error opening file." << std::endl;
+		return (0);
+	}
 	while (std::getline(infile, line))
 	{	
 		if (argv[2][0])
