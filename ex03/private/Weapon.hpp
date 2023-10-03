@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:13:13 by lduheron          #+#    #+#             */
-/*   Updated: 2023/07/15 19:10:49 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:06:18 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Weapon {
 		Weapon( std::string str );
 		~Weapon( void );
 
-		std::string	getType( void );
+		const std::string &	 getType( void );
 		void		setType( std::string newType );
 };
 
