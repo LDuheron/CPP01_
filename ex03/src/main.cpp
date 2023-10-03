@@ -6,15 +6,13 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:15:49 by lduheron          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:44 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 11:27:57 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 #include "Weapon.hpp"
-
-// un pointeur peut-etre nul mais pas une reference.
 
 int	main(void)
 {
