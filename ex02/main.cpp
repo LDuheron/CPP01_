@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 14:44:59 by lduheron          #+#    #+#             */
-/*   Updated: 2023/09/28 17:05:42 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:47:15 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,52 +29,19 @@ https://waytolearnx.com/2018/09/difference-entre-pointeur-et-reference.html
 
 */
 
-
-
-
-int	main(void)
-{
-	std::string	string = "HI THIS IS BRAIN";
-	std::string *stringPTR = &string;
-	std::string &stringREF = string;
-
-	std::cout << "Adresse de la string " << stringPTR << "\n";
-	std::cout << "Adresse de la string " << stringPTR << "\n";
-	
-
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int	main(void)
 {
 	std::string	stringContent = "HI THIS IS BRAIN";
 	std::string	*stringPTR = &stringContent;
 	std::string	&stringREF = stringContent;
 
-	std::cout << &stringContent << " is the address of stringContent\n";
-	std::cout << stringPTR << " is the address of stringPTR\n";
-	std::cout << &stringREF << " is the address of stringREF\n\n";
+	std::cout << &stringContent << " is the address of stringContent" << std::endl;
+	std::cout << stringPTR << " is the address of stringPTR" << std::endl;
+	std::cout << &stringREF << " is the address of stringREF\n" << std::endl;
 
-	std::cout << stringContent << " is the value of stringContent\n";
-	std::cout << *stringPTR << " is the value of stringPTR\n";
-	std::cout << stringREF << " is the value of stringREF\n";
+	std::cout << stringContent << " is the value of stringContent" << std::endl;
+	std::cout << *stringPTR << " is the value of stringPTR" << std::endl;
+	std::cout << stringREF << " is the value of stringREF" << std::endl;
 
 	return (0);
 }

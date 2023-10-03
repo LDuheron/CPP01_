@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:16:02 by lduheron          #+#    #+#             */
-/*   Updated: 2023/07/15 13:57:39 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:43:13 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void randomChump( std::string name )
 {
-	Zombie	zombie(name);
-	// std::cout << name;
+	Zombie	zombie = Zombie(name);
 	zombie.announce();
 }

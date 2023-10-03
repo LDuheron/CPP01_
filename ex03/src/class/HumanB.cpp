@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:19:46 by lduheron          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:21 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:48:07 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ HumanB::~HumanB()
 void	HumanB::attack( void )
 {
 	if (weapon == NULL)
-		std::cout << this->name <<  " has no weapon\n";
+		std::cout << this->name <<  " has no weapon" << std::endl;
 	else
 		std::cout << this->name << " attacks with their " << this->getWeapon() << std::endl;
 }
