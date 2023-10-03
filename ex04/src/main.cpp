@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:15:49 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/03 11:36:14 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 11:40:40 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Please enter 3 arguments." << std::endl;
+		std::cout << "Error: Please enter 3 arguments." << std::endl;
 		return (0);
 	}
 	std::string		filename = argv[1];
@@ -48,13 +48,13 @@ int	main(int argc, char **argv)
 
 	if (!infile.is_open() || infile.fail())
 	{
-		std::cout << "Error opening file." << std::endl;
+		std::cerr << "Error: cant open file" << argv[1] << "." << std::endl;
 		return (0);
 	}
 	std::ofstream	outfile(filename.append(".replace").c_str());
 	if (!outfile.is_open() || outfile.fail())
 	{
-		std::cout << "Error opening file." << std::endl;
+		std::cerr << "Error: open outfile failed." << std::endl;
 		return (0);
 	}
 	while (std::getline(infile, line))
