@@ -6,21 +6,14 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:15:59 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/01 17:49:53 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:53:39 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 // Constructor
-Zombie::Zombie(std::string name)
-{
-	_name = name;
-	std::cout << _name << " created." << std::endl;;
-	return ;
-}
-
-Zombie::Zombie()
+Zombie::Zombie(void)
 {
 	this->_name = "HORDE";
 	std::cout << _name << " created." << std::endl;;
