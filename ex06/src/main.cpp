@@ -6,27 +6,53 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:15:49 by lduheron          #+#    #+#             */
-/*   Updated: 2023/07/21 21:30:10 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:30:28 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
+int	find_complain(char *argv)
+{
+	std::string	level_complain[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		if (level_complain[i] == argv)
+			return (i);
+		i++;
+	}
+	return (4);
+}
+
 int	main(int argc, char **argv)
 {
 	Harl	harl;
-	stdd:string	input;
 
-	if (argc ! = 2)
-		std::cout << "Please, enter 2 arguments.";
-	get line
-	while (input)
+	if (argc != 2)
+		std::cout << "Please, enter 2 arguments." << std::endl;
+	else
 	{
-		switch (input)
-		harl.complain("DEBUG");
-		harl.complain("INFO");
-		harl.complain("WARNING");
-		harl.complain("ERROR");
+		switch (find_complain(argv[1]))
+		{
+			case (0):
+				harl.complain("DEBUG");
+				break;
+			case (1):
+				harl.complain("INFO");
+				break;
+			case (2):
+				harl.complain("WARNING");
+				break;
+			case (3):
+				harl.complain("ERROR");
+				break;
+			case (4):
+				std::cout << "Nothing to complain about today !" << std::endl;
+				break;
+		}
 	}
 	return (0);
 }
