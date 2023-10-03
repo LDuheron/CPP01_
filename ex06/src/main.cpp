@@ -37,21 +37,18 @@ int	main(int argc, char **argv)
 	{
 		switch (find_complain(argv[1]))
 		{
-			case (0):
-				harl.complain("DEBUG");
-				break;
-			case (1):
-				harl.complain("INFO");
-				break;
-			case (2):
-				harl.complain("WARNING");
-				break;
-			case (3):
-				harl.complain("ERROR");
-				break;
 			case (4):
 				std::cout << "Nothing to complain about today !" << std::endl;
 				break;
+			case (0):
+				harl.complain("DEBUG");
+			case (1):
+				harl.complain("INFO");
+			case (2):
+				harl.complain("WARNING");
+			case (3):
+				harl.complain("ERROR");
+		
 		}
 	}
 	return (0);
